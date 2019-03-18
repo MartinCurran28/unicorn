@@ -47,7 +47,7 @@ caption p {
 .row.row-flex {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .panel-default {
@@ -60,6 +60,7 @@ caption p {
 .panel-body {
     height: 60%;
     border: 5px solid #ddd;
+    clear: left;
 }
 
 .service-description {
@@ -72,4 +73,9 @@ caption p {
 
 .row {
     padding-left: 20px;
+}
+
+h2 {
+    padding-top: 50px;
+    padding-left: 10px;
 }
