@@ -6,7 +6,7 @@
 
 {% for item in cart_items %}
     
-    <h3>You currently have {{ item.quantity }} in your cart, you can purchase them <a href="{% url 'view_cart' %}">here</a>, or you can <a href="{% url 'view_cart' %}">keep shopping</a>.</h3> 
+    <h3>You currently have {{ item.quantity }} items in your cart, you can purchase them <a href="{% url 'view_cart' %}">here</a>, or you can <a href="{% url 'view_cart' %}">keep shopping</a>.</h3> 
            
 {% endfor %}
 {% endblock %}
