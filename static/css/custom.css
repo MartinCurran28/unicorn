@@ -1,0 +1,75 @@
+body {
+    font-family: Arial;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ededed;
+    color: #A9A9A9;
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.accountform {
+    padding-top: 20px;
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color:  #c67605;
+}
+
+.service {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+caption p {
+    word-wrap: break-word;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.panel-default {
+    border-color: transparent;
+    padding: 0 40px;
+    width: 500px;
+    margin: 0;
+}
+
+.panel-body {
+    height: 60%;
+    border: 5px solid #ddd;
+}
+
+.service-description {
+    min-height: 40px;
+}
+
+.display {
+    padding-top: 10px;
+}
+
+.row {
+    padding-left: 20px;
+}

@@ -3,30 +3,30 @@
 <html>
     <head>
         <title>{% block page_title %}{%endblock%}</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
     </head>
 
     <body>
-
-
+        
     <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
+            <a class="navbar-brand" href="/">Bedbug</a>
             {% if user.is_authenticated %}
             <li><a href="{% url 'profile' %}">Profile</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'services' %}">On Offer</a></li>
             {% else %}
             <li><a href="{% url 'login' %}">Login</a></li>
             <li><a href="{% url 'register' %}">Register</a></li>
             <li><a href="{% url 'password_reset' %}">Forgot Your Password?</a></li>
+            <li><a href="{% url 'services' %}">On Offer</a></li>
             {% endif %}
             <li>
                 <a href="{% url 'view_cart' %}">
@@ -37,18 +37,26 @@
                 </a>
             </li>
         </ul>
+    {% if messages %}
+        <div class="alert alert-success">
+            <div class="messages">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+        <div class="container">
+            <div class="display">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                  <input type="text" name="q">
+                  <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
 
-    <h1>
-        {% block page_heading %}{% endblock %}
-    </h1>
-    {% if messages %}
-    <div>
-        {% for message in messages %} {{ message }} {% endfor %}
-    </div>
-    {% endif %} {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 </body>
 
 </html>
-
-    
