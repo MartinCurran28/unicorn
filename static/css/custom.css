@@ -1,5 +1,6 @@
 body {
     font-family: Arial;
+    margin-top: 75px;
 }
 
 footer {
@@ -53,14 +54,14 @@ caption p {
 .panel-default {
     border-color: transparent;
     padding: 0 40px;
-    width: 500px;
+    width: 450px;
     margin: 0;
+    padding-left: 40px;
 }
 
 .panel-body {
-    height: 60%;
+    height: 100%;
     border: 5px solid #ddd;
-    clear: left;
 }
 
 .service-description {
