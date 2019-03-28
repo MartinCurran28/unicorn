@@ -10,12 +10,12 @@
             
             <h3>{{ service.name }}</h3>
             <p class="service-description">{{ service.description}}</p>
-            <p>{{ service.price }}</p>
+            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b>{{ service.price }}</b></p>
             
             <form method="post" action="{% url 'add_to_cart' service.id %}">
                 {% csrf_token %}
                 <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                    <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="Quantity">
                     <span class="input-group_btn">
                         <button class="btn btn-success" type="submit">Add</button>
                     </span>
