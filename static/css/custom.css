@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One: 100,200,300,400,500,600,700');
+
 body {
     font-family: Arial;
     margin-top: 75px;
@@ -8,7 +10,22 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid #ededed;
-    color: #A9A9A9;
+    color: #000000;
+}
+
+.page-footer{
+    color: #000000;
+}
+
+.btn btn-success{
+    margin-top: 5px;
+}
+
+
+
+.navbar-brand{
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 40px;
 }
 
 .icon-bar {

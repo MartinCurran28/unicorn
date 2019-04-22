@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row" height=420>
+        
+        
+      {% for debug in debugs %}
+          <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                   <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ debug.image }}')"></div>
+                   <h3><center>{{debug.name}}</center></h3>
+                   <p class="service-description"><center>{{ debug.description }}</center></p>
+
+                      
+              </div>
+          </div>
+      {% endfor %}    
+    </div>
+</div>
+      
+{% endblock %}

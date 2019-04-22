@@ -16,7 +16,7 @@ def logout(request):
     """Log the user out"""
     auth.logout(request)
     messages.success(request, "You have been successfully logged out!")
-    return redirect(reverse('index'))
+    return redirect(reverse('login'))
     
 def login(request):
     """return a login page"""
@@ -73,7 +73,6 @@ def registration(request):
 
 def user_profile(request):
     """The user's profile page. Get user below:"""
-    
     user = User.objects.get(email=request.user.email)
     return render(request, "profile.html", {"profile": user})
 

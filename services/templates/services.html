@@ -1,29 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<div class= "row row-flex">
-{% for service in services %}
-
-<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-4 display panel panel-default">
-    <div class="panel-body">
-        <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ service.image }}')"></div>
-            
-            <h3>{{ service.name }}</h3>
-            <p class="service-description">{{ service.description}}</p>
-            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b>{{ service.price }}</b></p>
-            
-            <form method="post" action="{% url 'add_to_cart' service.id %}">
-                {% csrf_token %}
-                <div class="input-group">
-                    <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="Quantity">
-                    <span class="input-group_btn">
-                        <button class="btn btn-success" type="submit">Add</button>
-                    </span>
-                </div>    
-            </form>
+<div class="container">
+    <div class="row" height=420>
+        <h2><strong><center>Future Features</center></strong></h2>
+      {% for service in services %}
+          <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                   <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ service.image }}')"></div>
+                   <h3><center>{{service.name}}</center></h3>
+                   <p class="service-description"><center>{{ service.description }}</center></p>
+                   <center><p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b>{{ service.price }}</b></p></center>
+                   
+                   <center>
+                     <form method="post" action="{% url 'add_to_cart' service.id %}">
+                    {% csrf_token %}
+                     <div class="input-group">
+                       <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                         <span class="input-group_btn">
+                           <p><button class="btn btn-success" type="submit">Button</button> 
+                         </span>    
+                     </div>
+                    </form>
+                   </center>
+                      
+              </div>
+          </div>
+      {% endfor %}    
     </div>
-    
 </div>
-{% endfor %}
-</div>
+
+<!-- Footer -->
+<footer class="page-footer">
+
+  <!-- Copyright -->
+  <div class="container">
+    <div class="row">
+      <center>
+    <a class="navbar-brand" href="">Bedbug</a>
+  </div>
+  </center>
+    </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
 {% endblock %}
