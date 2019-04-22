@@ -5,3 +5,6 @@ def debug_detail(request, pk):
     return render(request, "debug_details.html", {'debug': debug})    
     
  url(r'^(?P<pk>\d+)/$', debug_detail, name='debug_detail'),    
+ 
+ 
+Like button functionality credit -  https://stackoverflow.com/questions/36014336/django-like-button-dosent-increment-and-redirect-me-to-the-same-page

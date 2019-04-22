@@ -11,9 +11,9 @@
                     <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ debug.image }}')"></div>
                     <h3><center>{{debug.name}}</center></h3>
                    <p class="service-description"><center>{{debug.description}}</center></p>
-                   <p class="service-description"><center>{{ debug.views }}</center></p>
-                   <center><p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block">{{debug.likes}}</a></b></p></center>
-                   <center><p><button class="btn btn-success" type="submit">View</button></center> 
+                   <p class="service-description"><center><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ debug.views }}</center></p>
+                   <center><p><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b> {{debug.likes}}</b></p></center>
+                   <center><p><button class="btn btn-success" type="submit"><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block">Like</a></button></center> 
                    <center><p><a href="{% url 'all_debug' %}"><button class="btn btn-success" type="submit">Read More</button></a></p></center> 
               </div>
               {% endfor %} 
