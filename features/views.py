@@ -5,6 +5,9 @@ from .models import Debug, Future_Feature
 def all_debug(request):
     debugs = Debug.objects.all()
     features = Future_Feature.objects.all()
+    for debug in debugs:
+        debug.views += 1
+        debug.save()
     return render(request, 'debug_details.html', {"debugs": debugs}, {"features": features})
     
 def bug_details(request, pk):
