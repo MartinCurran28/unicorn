@@ -29,8 +29,6 @@ def free_debug(request):
     debugs = Debug.objects.all()
     return render(request, 'free_debug.html', {"debugs": debugs})    
     
+def form_view(request):
+    return render(request, 'form.html')
     
-    
-    
-    
-

@@ -7,8 +7,6 @@ class Debug(models.Model):
     likes = models.IntegerField(default=0)
     image = models.ImageField(upload_to='image')
     
-    def __str__(self):
-        return self.name
         
 class Future_Feature(models.Model):
     name = models.CharField(max_length=250, default='')

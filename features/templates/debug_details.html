@@ -11,21 +11,12 @@
                     <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ debug.image }}')"></div>
                     <h3><center>{{debug.name}}</center></h3>
                    <p class="service-description"><center>{{debug.description}}</center></p>
-                   <p class="service-description"><center><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ debug.views }}</center></p>
-                   <center><p><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b> {{debug.likes}}</b></p></center>
-                   <center><p><button class="btn btn-success" type="submit"><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block">Like</a></button></center> 
-                   <center><p><a href="{% url 'all_debug' %}"><button class="btn btn-success" type="submit">Read More</button></a></p></center> 
+                   <p class="service-description"><center><span class="glyphicon glyphicon-user" aria-hidden="true"></span></center></p>
+                  <center><b>{{debug.views}} Pages Views</b></center>
+                   <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} Users  Like this!</b></p></center>
+                   <center><a href="{% url 'form_view' %}">Read More</a></center> 
               </div>
               {% endfor %} 
-          </div>
-          <div class="col-sm-6 col-md-6">
-              <div class="thumbnail">
-                   <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ feature.image }}')"></div>
-                   <h3><center>Future Feature</center></h3>
-                   <p class="service-description"><center>Features We Hope to Implement With Your Support!</center></p>
-                   
-                   <center><p><a href="{% url 'services' %}"><button class="btn btn-success" type="submit">Read More</button></a></p></center> 
-              </div>
           </div>
     </div>
 </div>
