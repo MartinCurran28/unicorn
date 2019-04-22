@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row" height=420>
+          <div class="col-sm-12 col-md-6">
+              {% for debug in debugs %}
+              <div class="thumbnail">
+                    <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ debug.image }}')"></div>
+                    <h3><center>{{debug.name}}</center></h3>
+                   <p class="service-description"><center>{{debug.description}}</center></p>
+                   <p class="service-description"><center>{{ debug.views }}</center></p>
+                   <center><p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block">{{debug.likes}}</a></b></p></center>
+                   <center><p><button class="btn btn-success" type="submit">View</button></center> 
+                   <center><p><a href="{% url 'all_debug' %}"><button class="btn btn-success" type="submit">Read More</button></a></p></center> 
+              </div>
+              {% endfor %} 
+          </div>
+          <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                   <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ feature.image }}')"></div>
+                   <h3><center>Future Feature</center></h3>
+                   <p class="service-description"><center>Features We Hope to Implement With Your Support!</center></p>
+                   
+                   <center><p><a href="{% url 'services' %}"><button class="btn btn-success" type="submit">Read More</button></a></p></center> 
+              </div>
+          </div>
+    </div>
+</div>
+      
+      
+{% endblock %}

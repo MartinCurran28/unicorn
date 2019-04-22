@@ -16,7 +16,14 @@ def bug_details(request, pk):
     debug.save()
     return render(request, 'debug_view.html', {'debug': debug})  
     
-
+def bug_like(request, pk):
+    if pk:
+        debug = Debug.objects.get(id=pk)
+        count = debug.likes
+        count += 1
+        debug.likes = count
+        debug.save()
+    return redirect('all_debug')
     
 def free_debug(request):
     debugs = Debug.objects.all()
