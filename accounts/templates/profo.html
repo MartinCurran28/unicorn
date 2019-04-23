@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% for profo in profos %}
+<div class="service" style="background-image: url('{{ MEDIA_URL }}{{ profo.image }}')"></div>
+ {{ profo.about_me}}
+{% endfor %}
+
+{% endblock %}

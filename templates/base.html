@@ -14,6 +14,7 @@
 
     {% block head_js %}
     {% endblock head_js %}
+    
 <body>
      <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
@@ -33,6 +34,8 @@
             <li><a href="{% url 'profile' %}">{{user}}</a></li>
             <li><a href="{% url 'all_debug' %}">Debug</a></li>
             <li><a href="{% url 'services' %}">On Offer</a></li>
+            <li><a href="{% url 'get_posts' %}">Posts</a></li>
+            <li><a href="{% url 'new_post' %}">Add A Post</a></li>
             <li>
                 <a href="{% url 'view_cart' %}">
                     <i class="fa fa-shipping-cart"></i> Cart
@@ -47,6 +50,7 @@
             <li><a href="{% url 'register' %}">Register</a></li>
             <li><a href="{% url 'password_reset' %}">Forgot Your Password?</a></li>
             <li><a href="{% url 'services' %}">On Offer</a></li>
+            <li><a href="{% url 'profo' %}">Profile</a></li>
             
             {% endif %}
             
@@ -72,6 +76,7 @@
 {% endif %}
 
     {% block content %}{% endblock %}
+    <script src="static/js/sendEmail.js"></script>
 </body>
 
 </html>

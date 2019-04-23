@@ -32,3 +32,7 @@ def free_debug(request):
 def form_view(request):
     return render(request, 'form.html')
     
+def join_us(request):
+    return render(request, 'join_us.html')    
+    
+    

@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import urls as urls_accounts
+from django.views.generic import RedirectView
 from services import urls as urls_services
 from cart import urls as urls_cart
 from search import urls as urls_search
@@ -28,6 +29,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', all_services, name='index'),
     url(r'^accounts/', include(urls_accounts)),
+    url(r'^$', RedirectView.as_view(url='posts/')),
     url(r'^services/', include(urls_services)),
     url(r'^cart/', include(urls_cart)), 
     url(r'^checkout/', include(urls_checkout)),

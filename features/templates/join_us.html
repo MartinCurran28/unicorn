@@ -1,23 +1,13 @@
-
 {% extends 'base.html' %}{% block content %}
 
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("user_RoKHg1ijkctqHuw2A6IUj");
-        })();
-    </script>
-
-<center><h2>We fix the following bugs for free! Try us!</h2></center>
-
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Describe Your Bug</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Join Our Team!</h2>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">Please describe the bug problem that you are encountering. Give us details of your issue along with your contact details and we will be in touch within 24 hours.</p>
+    <p class="text-center w-responsive mx-auto mb-5">We're Always Looking For Enthusiastic Developers to Join the Team! Send us your CV and We'll be in touch!</p>
 <div class="container">
     
     <div class="row"></div>
      
-            <form onsubmit="return sendMail(this);" method="POST">
+            <form id="contactForm" onsubmit="return sendMail(this);" method="POST">
               {% csrf_token %}
 
                 <!--Grid row-->
