@@ -3,12 +3,13 @@
     {% for post in posts %}
         <div class="row">
             <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-img" href="#">
-                    <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ post.profile_image }}')"></div>
-                </a>
-                <p><span class="boldtext">Author:</span></p>
+                <p><span class="boldtext"><i>{{user}}</i></span></p>
+
             </div>
-            <div class="col-md-10 col-sm-9">
+            <div class="container">
+                 <div class="col-md-10 col-sm-9">
+                <h2><b>{% block page_title %}{{user}}'s profile{%endblock%}</b></h2>
+                <h3>You currently have {{ service_count }} items in your cart, you can purchase them <a href="{% url 'view_cart' %}">here</a>, or you can <a href="{% url 'services' %}">keep shopping</a>.</h3>
                 <h3>{{ post.title }}</h3>
                 <div class="row">
                     <div class="col-xs-9">
@@ -19,7 +20,11 @@
                         <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
                     </div>
                 </div>
+                <li><a href="{% url 'new_post' %}">Add A Post</a></li>
             </div>
+                
+            </div>
+           
             <hr>
         </div>
     {% endfor %}

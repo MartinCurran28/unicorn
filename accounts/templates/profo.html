@@ -2,9 +2,11 @@
 {% block content %}
 
 
-{% for profo in profos %}
-<div class="service" style="background-image: url('{{ MEDIA_URL }}{{ profo.image }}')"></div>
- {{ profo.about_me}}
+{% for post in posts %}
+
+<div class="service" style="background-image: url('{{ MEDIA_URL }}{{ post.profile_image }}')"></div>
+<center>{{user}}</center>
+
 {% endfor %}
 
 {% endblock %}
