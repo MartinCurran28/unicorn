@@ -1,12 +1,5 @@
-[![Build Status](https://travis-ci.org/MartinCurran28/bedbug.svg?branch=master)](https://travis-ci.org/MartinCurran28/bedbug)
+Unicorn Issue Tracker
+===
+**Milestone Project Five: Full Stack Frameworks - Code Institute**
 
-def debug_detail(request, pk):
-    debug = get_object_or_404(Debug, pk=pk)
-    debug.views += 1
-    debug.save()
-    return render(request, "debug_details.html", {'debug': debug})    
-    
- url(r'^(?P<pk>\d+)/$', debug_detail, name='debug_detail'),    
- 
- 
-Like button functionality credit -  https://stackoverflow.com/questions/36014336/django-like-button-dosent-increment-and-redirect-me-to-the-same-page
+The Unicorn Issue Tracker is a project established to provide care for clients looking to have their computer-based bugs exterminated! The site provides a free debugging service to any and all users who need their computer’s hardware or software wiped of bugs. The site offers clients the opportunity to explain and describe their bug-related problems to our team who will then study the problem and endeavour to solve the issue. Unicorn is user-friendly and uses attributes such as like buttons and view counters to better understand what the user wants from the site and how we can make our clients’ experience even better. Not only does Unicorn offer a free debugging service out of courtesy to their users, but the enterprise hopes that through this goodwill, patrons will also contribute to the business’ on-going expansion through donation. This is a similar business model to something like a Patreon page where more services and features can be offered to the site as it grows with continued support. 
