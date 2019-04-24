@@ -5,6 +5,36 @@ Unicorn Issue Tracker
 The Unicorn Issue Tracker is a project established to provide care for clients looking to have their computer-based bugs exterminated! The site provides a free debugging service to any and all users who need their computer’s hardware or software wiped of bugs. The site offers clients the opportunity to explain and describe their bug-related problems to our team who will then study the problem and endeavour to solve the issue. Unicorn is user-friendly and uses attributes such as like buttons and view counters to better understand what the user wants from the site and how we can make our clients’ experience even better. Not only does Unicorn offer a free debugging service out of courtesy to their users, but the enterprise hopes that through this goodwill, patrons will also contribute to the business’ on-going expansion through donation. This is a similar business model to something like a Patreon page where more services and features can be offered to the site as it grows with continued support. 
 
 
+Existing Features
+---
+
+In this section, I will briefly describe each user available feature which this project has to offer.
+
+* **Navigation Bar** - Allows users to navigate between web pages on the site using marked buttons.
+* **Side Navigation bar** - A responsive navigation bar which will offer the same standard navigation for smaller devices.
+* **Sign Up!** – A page which prompts the user for their email address, a username, and two separate password confirmations before registering them to the site.
+* **Log in Page** – A page which prompts the user for their username and Password. Log in is a requirement for certain features of this website.
+* **Future Features Menu** – A page which displays the website’s Future Features – Services that will become available to users if enough money is donated. 
+* **View-Counter** – A number display signifying the number of visits a page receives. 
+* **Like Button** – A thumb icon used to count and display the number of times a user likes something. 
+* **Quantity Bar** – An input bar which will allow the user to input their desired quantity of a future feature service.
+* **Cart Icon** – Once a quantity of a feature is added to the user’s cart, they will be reminded of their pending purchase by a numbered icon in the navbar.
+* **Cart** – A page which displays any and all items added to the cart from the future features page along with the quantity of those items and their total price. Cart also includes a link to the Checkout page.
+* **Checkout** – A page dedicated to customer payment. The user is again greeting with the items they chose from future features along with the quantity and total price before being prompted to give their personal information debit or credit card details. 
+* **Debug Menu** – Similar to the Future Features menu, Debug Menu provides a list of options to the user including their courtesy debugging procedure, the organisation of a friendly Skype call, or if the user simply wishes to query the team about something. 
+* **Describe Your Bug Menu** – A menu which prompts the user to describe their issue. The form is composed in order to get necessary contact details from the user, a description of the user’s issue, and, if they like, an Image (screenshot) of their bug to better understand how to approach the issue. Once the form is sent, the user is redirected to a new page.
+* **Review Us** – A blog spot that is kept anonymous where users can compose and share their experience and overall opinions of the site. Each review can be edited and a view counter is added to understand where attention needs to be paid.
+* **Join the Team!** – A form kept at the footer of each webpage for users who wish to join the debugging team. In essence, a job application which will allow the user to compose a cover letter and attach a CV for the site’s admins to consider. 
+* **Search Bar** – Allows users to filter their service search through key words.
+
+**Features Left to Implement**
+* One feature which I gravely regretful could not be included in this project was a password reset function. For this reason, it was my decision to leave the feature out of the project. It’s a decision I stand by because if it couldn’t function sufficiently, then there was no point including it. I could not figure out the procedure to send an email once the reset was triggered as I was shown in tutorial, and despite asking tutors and student support for assistance, I regret to inform that nobody provided me with any help or assistance. However, I hope to better understand and implement this feature to the project as soon as I can.
+
+* Due to time constraint, I also could not include the graph and full user transparency section discussed in the assignment outline. I prioritized other parts of this project which I felt needed the attention and which needed to be implemented as best they could before submission. I regretfully could not get to this part of the assignment in time. I stand by my work and I hope to implement this feature as soon as I can.
+
+
+
+
 Technologies Used
 ---
 
