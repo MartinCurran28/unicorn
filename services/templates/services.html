@@ -3,12 +3,14 @@
 <div class="container">
     <div class="row" height=420>
         <h2><strong><center>Future Features</center></strong></h2>
+       <center><h3>These Features Will Implemented With Your Support! Please Give What You Can and Be Sure to Upvote The Features You'd Like To See.</h3></center>
       {% for service in services %}
           <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
                    <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ service.image }}')"></div>
                    <h3><center>{{service.name}}</center></h3>
                    <p class="service-description"><center>{{ service.description }}</center></p>
+                   <center><p><a href="{% url 'service_like' pk=service.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{service.likes}} Likes!</b></p></center>
                    <center><p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b>{{ service.price }}</b></p></center>
                    
                    <center>
