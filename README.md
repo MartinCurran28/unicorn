@@ -10,49 +10,49 @@ Technologies Used
 
 The following list contains all technologies used in the creation of this project.
 * **Cloud9**
-  *Platform used to write the necessary code for this project. Link for the official site provided[here](https://c9.io/login).
+  * Platform used to write the necessary code for this project. Link for the official site provided [here](https://c9.io/login).
 
 * **Python**
-  *The programming language used on this project. Link for the official site provided[here]( https://www.python.org/). 
+  * The programming language used on this project. Link for the official site provided [here]( https://www.python.org/). 
 
 * **Django**
-  *The web framework used for the project’s architecture in conjunction with Python. Link for the official site provided[here]( https://www.djangoproject.com/).
+  * The web framework used for the project’s architecture in conjunction with Python. Link for the official site provided [here]( https://www.djangoproject.com/).
 
 * **Pillow**
-  *Used to facilitate file upload. Link for the official site provided[here]( https://pypi.org/project/Pillow/). 
+  * Used to facilitate file upload. Link for the official site provided [here]( https://pypi.org/project/Pillow/). 
 
 * **GitHub**
-  *Used for committing and storing code as it is written. Link for the official site provided[here]( https://github.com/).
+  * Used for committing and storing code as it is written. Link for the official site provided [here]( https://github.com/).
 
 * **Ginja**
-  *Used to incorporate Python code in an HTML file setting.
+  * Used to incorporate Python code in an HTML file setting.
 
 * **JQuery**
-  *The project uses JQuery to initialize the Stripe payment method. Link for the official site provided[here]( https://jquery.com/).
+  * The project uses JQuery to initialize the Stripe payment method. Link for the official site provided [here]( https://jquery.com/).
 
 * **HTML**
-  *The project uses HTML as the mark-up language.
+  * The project uses HTML as the mark-up language.
 
 * **CSS**
-  *The project uses CSS to style the HTML elements.
+  * The project uses CSS to style the HTML elements.
 
 * **Bootstrap**
-  *Used for style and structure of webpages. Link for the official site provided [here]( https://getbootstrap.com/). 
+  * Used for style and structure of webpages. Link for the official site provided [here]( https://getbootstrap.com/). 
 
 * **Bootswatch**  
-  *Used for additional styling. Link provided [here]( https://bootswatch.com/). 
+  * Used for additional styling. Link provided [here]( https://bootswatch.com/). 
 
 * **Font Awesome**
-  *Used to add visual icons to the project. Link for the site provided [here]( https://fontawesome.com/).
+  * Used to add visual icons to the project. Link for the site provided [here]( https://fontawesome.com/).
 
 * **Google Fonts**
-  *Used to add a specific font to certain sections of HTML text. Link for the offical site provided [here]( https://fonts.google.com/).
+  * Used to add a specific font to certain sections of HTML text. Link for the offical site provided [here]( https://fonts.google.com/).
 
 * **Javascript**
-  *Used to initialise and set up Stripe Payment method. Link for the official site provided[here]( https://www.javascript.com/).
+  * Used to initialise and set up Stripe Payment method. Link for the official site provided[here]( https://www.javascript.com/).
 
 * **Stripe**
-  *Method used for online card payment processing in this project. Link for the official site provided[here]( https://stripe.com/en-IE/).
+  * Method used for online card payment processing in this project. Link for the official site provided[here]( https://stripe.com/en-IE/).
 
 
 
