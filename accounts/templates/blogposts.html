@@ -2,6 +2,12 @@
 {% block content %}
     <div class="container">
         <div class="row">
+            <center>
+                <a class="story-img" href="#">
+                    <img src="/media/image/bbugs.jpg" height="200">
+                </a>
+            </center>
+            
              <center><h2><a class="brand">Unicorn</a></h2></center><center><h2>Reviews</h2></center>
                 <center><h3>These are completely annonymous so don't worry!</h3></center>
                 <center><p><a href="{% url 'new_post' %}" class="btn btn-default">Add A Review</a></p></center>
@@ -29,4 +35,37 @@
         </div>
         <hr>
     </div>
+    
+    
+<!-- Footer -->
+<footer class="page-footer">
+
+  <!-- Copyright -->
+  <div class="container">
+    <div class="row">
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="">Unicorn</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+            <div class="display">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                  <input type="text" name="q">
+                  <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+   </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 {% endblock %}

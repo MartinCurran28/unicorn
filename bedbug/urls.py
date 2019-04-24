@@ -18,7 +18,6 @@ from django.contrib import admin
 from accounts import urls as urls_accounts
 from form import urls as urls_forms
 from join import urls as urls_join
-from user import urls as urls_user
 from django.views.generic import RedirectView
 from services import urls as urls_services
 from cart import urls as urls_cart
@@ -34,7 +33,6 @@ urlpatterns = [
     url(r'^accounts/', include(urls_accounts)),
     url(r'^forms/', include(urls_forms)),
     url(r'^join/', include(urls_join)),
-    url(r'^user/', include(urls_user)),
     url(r'^$', RedirectView.as_view(url='posts/')),
     url(r'^services/', include(urls_services)),
     url(r'^cart/', include(urls_cart)), 

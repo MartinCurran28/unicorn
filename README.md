@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MartinCurran28/bedbug.svg?branch=master)](https://travis-ci.org/MartinCurran28/bedbug)
+
 def debug_detail(request, pk):
     debug = get_object_or_404(Debug, pk=pk)
     debug.views += 1

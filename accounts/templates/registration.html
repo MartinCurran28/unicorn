@@ -9,7 +9,12 @@
 {% block content %}
 
 <div class="container">
-<h2><b>Welcome to Bedbug!</b></h2>
+    <center>
+    <a class="story-img" href="#">
+        <img src="/media/image/fbug.png">
+    </a>
+</center>
+<center><h2><b>Welcome to Bedbug!</b></h2></center>
 <form method="POST">
     {% csrf_token %}
     {{ registration_form | as_bootstrap}}
@@ -17,5 +22,37 @@
     <p>If you already have an account, you can <a href="{% url 'login' %}">Sign in!</a></p>
 </form>    
 </div>
+
+<!-- Footer -->
+<footer class="page-footer">
+
+  <!-- Copyright -->
+  <div class="container">
+    <div class="row">
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="">Unicorn</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+            <div class="display">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                  <input type="text" name="q">
+                  <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+   </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 {% endblock %}

@@ -4,6 +4,11 @@
 
 {% block content %}
 <div class="container">
+        <center>
+            <a class="story-img" href="#">
+                <img src="/media/image/debuggs.png" height="300">
+            </a>
+        </center>
     <center><h2>Your Unicorn Cart</h2></center>
      <center><h3>Thank You For Your Interest In Our <a href="{% url 'services' %}">Future Feature</a>!</h3></center>
     <center><h3>You currently have {{ service_count }} items in your cart, you can purchase them now, or you can <a href="{% url 'services' %}">keep shopping</a>.</h3> </center> 
@@ -51,5 +56,37 @@
 </div>
 
 </div>
+
+    <!-- Footer -->
+<footer class="page-footer">
+
+  <!-- Copyright -->
+  <div class="container">
+    <div class="row">
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="">Unicorn</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+            <div class="display">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                  <input type="text" name="q">
+                  <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+   </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 {% endblock %}
