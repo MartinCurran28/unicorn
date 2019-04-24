@@ -4,6 +4,58 @@ Unicorn Issue Tracker
 
 The Unicorn Issue Tracker is a project established to provide care for clients looking to have their computer-based bugs exterminated! The site provides a free debugging service to any and all users who need their computer’s hardware or software wiped of bugs. The site offers clients the opportunity to explain and describe their bug-related problems to our team who will then study the problem and endeavour to solve the issue. Unicorn is user-friendly and uses attributes such as like buttons and view counters to better understand what the user wants from the site and how we can make our clients’ experience even better. Not only does Unicorn offer a free debugging service out of courtesy to their users, but the enterprise hopes that through this goodwill, patrons will also contribute to the business’ on-going expansion through donation. This is a similar business model to something like a Patreon page where more services and features can be offered to the site as it grows with continued support. 
 
+
+Technologies Used
+---
+
+The following list contains all technologies used in the creation of this project.
+* **Cloud9**
+  *Platform used to write the necessary code for this project. Link for the official site provided[here](https://c9.io/login).
+
+* **Python**
+  *The programming language used on this project. Link for the official site provided[here]( https://www.python.org/). 
+
+* **Django**
+  *The web framework used for the project’s architecture in conjunction with Python. Link for the official site provided[here]( https://www.djangoproject.com/).
+
+* **Pillow**
+  *Used to facilitate file upload. Link for the official site provided[here]( https://pypi.org/project/Pillow/). 
+
+* **GitHub**
+  *Used for committing and storing code as it is written. Link for the official site provided[here]( https://github.com/).
+
+* **Ginja**
+  *Used to incorporate Python code in an HTML file setting.
+
+* **JQuery**
+  *The project uses JQuery to initialize the Stripe payment method. Link for the official site provided[here]( https://jquery.com/).
+
+* **HTML**
+  *The project uses HTML as the mark-up language.
+
+* **CSS**
+  *The project uses CSS to style the HTML elements.
+
+* **Bootstrap**
+  *Used for style and structure of webpages. Link for the official site provided [here]( https://getbootstrap.com/). 
+
+* **Bootswatch**  
+  *Used for additional styling. Link provided [here]( https://bootswatch.com/). 
+
+* **Font Awesome**
+  *Used to add visual icons to the project. Link for the site provided [here]( https://fontawesome.com/).
+
+* **Google Fonts**
+  *Used to add a specific font to certain sections of HTML text. Link for the offical site provided [here]( https://fonts.google.com/).
+
+* **Javascript**
+  *Used to initialise and set up Stripe Payment method. Link for the official site provided[here]( https://www.javascript.com/).
+
+* **Stripe**
+  *Method used for online card payment processing in this project. Link for the official site provided[here]( https://stripe.com/en-IE/).
+
+
+
 Credits
 ---
 
@@ -25,7 +77,7 @@ The following is a list of links for all images used on this project:
 *	**Debug for Free Image** – Source: Drupal.org. Link provided [here]( https://www.drupal.org/project/debug_tools).
 *	**Arrange a Skype Call Image** – Source: PGogyWebStuff.com. Link provided [here]( https://pgogywebstuff.com/contact/skype/attachment/skype-logo/).
 *	**Question Mark Image** – Source: FlatIcon.com. Link Provided [here]( https://www.flaticon.com/free-icon/question-mark_36601).
-*	**Describe Your Bug Form Image** – Source: ShareIcon.net. Link provided [here] (https://www.shareicon.net/computing-technology-laptop-computer-computers-bugs-laptops-repairing-706780).
+*	**Describe Your Bug Form Image** – Source: ShareIcon.net. Link provided [here](https://www.shareicon.net/computing-technology-laptop-computer-computers-bugs-laptops-repairing-706780).
 *	**Thumbs Up Image** – Source: PixaBay.com. Link provided [here](https://pixabay.com/images/search/thumbs%20up/).
 *	**Review Us Mast Image** – Source: SVGRepo.com. Link provided [here]( https://www.svgrepo.com/vectors/computer-security-collection/&type=recent).
 *	**Cart Mast Image** – Link provided [here]( https://cis.bentley.edu/sandbox/index.php/2017/03/16/java-debugging-cheat-sheet/).
