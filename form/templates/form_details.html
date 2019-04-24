@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-We have recieved your form and will be in contact shortly. Here are you form details:
-    {% for form in forms %}
-       
-              {{form.name}}
-                <h3>{{ form.title }}</h3>
-                
-    {% endfor %}
-    <b>Strong: </b> Pending
+<center><h2>Thank you!</h2></center>
+
+ <center>
+    <a class="story-img" href="#">
+      <img src="/media/image/thumb.png">
+    </a>
+  </center>
+  
+<center><h2>We Have Recieved Your Details And Will Be in Touch Shortly. Your Currently Status is <b>Pending</b></h2></center>
+<center><h3>In the Meantime, Why Note Check Out Some of Our Great <a href="{% url 'services' %}">Future Feature</a>!</h3></center>
+
 {% endblock %}

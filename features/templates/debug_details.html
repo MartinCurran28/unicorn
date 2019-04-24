@@ -4,8 +4,15 @@
 
 
 <div class="container">
-    <div class="row" height=420>
-          <div class="col-sm-4 col-md-4">
+    
+    <div class="row">
+        <h2><strong><center>Future Features</center></strong></h2>
+        <center><h3>These Features Will Implemented With Your Support! Please Give What You Can and Be Sure to Upvote The Features You'd Like To See.</h3></center>
+    </div>      
+          
+    <div class="container">   
+        <div class="row"> 
+            <div class="col-sm-12 col-md-12">
               {% for debug in debugs %}
               <div class="thumbnail">
                     <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ debug.image }}')"></div>
@@ -16,14 +23,52 @@
                    {% if user.is_authenticated %}
                      <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} Users  Like this!</b></p></center>
                       <center><li><a href="{% url 'new_form' %}">Read More</a></center> 
+                       <center><a href="{% url 'new_form' %}" class="btn btn-default">Read More</a></center>
                    {% else %}
                      <center><b>{{debug.likes}} Likes!</b></center>
-                    {% endif %}
+                   {% endif %}
               </div>
               {% endfor %} 
-          </div>
+            </div>  
+            
+            
+        </div>    
+              
     </div>
+    
 </div>
+
+<!-- Footer -->
+<footer class="page-footer">
+
+  <!-- Copyright -->
+  <div class="container">
+    <div class="row">
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="">Unicorn</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+          <center>
+             <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a>
+          </center>
+       </div>
+       <div class="col-sm-4 col-md-4">
+            <div class="display">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                  <input type="text" name="q">
+                  <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+   </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
       
       
 {% endblock %}
