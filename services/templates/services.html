@@ -45,6 +45,14 @@
              <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a>
           </center>
        </div>
+       <div class="col-sm-6 col-md-6">
+            <div class="display">
+                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                  <input type="text" name="q">
+                  <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </div>
     </div>
    </div>

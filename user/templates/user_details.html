@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for profo in profos %}
+  <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ profo.image }}')"></div>
+  <center>{{user}}</center>
+ <center>{{profo.about_me}}</center> 
+{% endfor %}
+ 
+ <center><h3>You currently have {{ service_count }} items in your cart, you can purchase them <a href="{% url 'view_cart' %}">here</a>, or you can <a href="{% url 'services' %}">keep shopping</a>.</h3> </center> 
+ 
+    
+{% endblock %}

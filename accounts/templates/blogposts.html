@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for post in posts %}
+    <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-3 text-center">
-                <p><span class="boldtext"><i>{{user}}</i></span></p>
-
-            </div>
-            <div class="container">
-                 <div class="col-md-10 col-sm-9">
-                <h2><b>{% block page_title %}{{user}}'s profile{%endblock%}</b></h2>
-                <h3>You currently have {{ service_count }} items in your cart, you can purchase them <a href="{% url 'view_cart' %}">here</a>, or you can <a href="{% url 'services' %}">keep shopping</a>.</h3>
+             <center><h2><a class="brand">Unicorn</a></h2></center><center><h2>Reviews</h2></center>
+                <center><h3>These are completely annonymous so don't worry!</h3></center>
+                <center><p><a href="{% url 'new_post' %}" class="btn btn-default">Add A Review</a></p></center>
+        </div>  
+    </div>    
+                
+                <hr>
+    <div class="container">            
+        <div class="row">        
+            <div class="col-md-10 col-sm-9">
+                 {% for post in posts %}   
                 <h3>{{ post.title }}</h3>
                 <div class="row">
                     <div class="col-xs-9">
@@ -20,12 +23,10 @@
                         <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
                     </div>
                 </div>
-                <li><a href="{% url 'new_post' %}">Add A Post</a></li>
+                <hr>
+                 {% endfor %}
             </div>
-                
-            </div>
-           
-            <hr>
         </div>
-    {% endfor %}
+        <hr>
+    </div>
 {% endblock %}

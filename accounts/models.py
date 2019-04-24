@@ -15,7 +15,6 @@ class Post(models.Model):
     views = models.IntegerField(default=0)
     tag = models.CharField(max_length=200, blank=True, null=True)
     image = models.ImageField(upload_to="img", blank=True, null=True)
-    profile_image = models.ImageField(upload_to="img", blank=True, null=True)
     
     def __unicode__(self):
         return self.title
