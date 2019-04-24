@@ -4,8 +4,9 @@
 We have recieved your form and will be in contact shortly. Here are you form details:
     {% for form in forms %}
        
-              
+              {{form.name}}
                 <h3>{{ form.title }}</h3>
                 
     {% endfor %}
+    <b>Strong: </b> Pending
 {% endblock %}

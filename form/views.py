@@ -4,7 +4,8 @@ from .models import Form
 from .forms import BugForm
 
 def get_form(request):
-    return render(request, "forms.html")
+    forms= Form.objects.all()
+    return render(request, "bugform.html", {"forms":forms})
 
 def create_or_edit_form(request, pk=None):
     """
@@ -17,7 +18,7 @@ def create_or_edit_form(request, pk=None):
         form = BugForm(request.POST, request.FILES, instance=form)
         if form.is_valid():
             form = form.save()
-            return render(request, "forms.html")
+            return render(request, "form_details.html")
     else:
         form = BugForm(instance=form)
     return render(request, 'bugform.html', {'form': form})  

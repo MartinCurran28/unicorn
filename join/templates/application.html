@@ -2,7 +2,6 @@
 {% load bootstrap_tags %}
 {% block content %}
 <div class="container">
-    <center><img src="media/image/bugs.png"></center>
     <center><h2>We fix the following bugs for free! Try us!</h2></center>
 
     <h2 class="h1-responsive font-weight-bold text-center my-4">Describe Your Bug</h2>
@@ -11,7 +10,7 @@
      
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form | as_bootstrap }}
+        {{ app | as_bootstrap }}
         <button type="submit" class="btn btn-info">Save</button>
     </form>
 </div>

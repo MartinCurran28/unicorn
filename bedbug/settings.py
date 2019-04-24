@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'storages',
     'features',
     'form',
+    'join',
 ]
 
 MIDDLEWARE = [

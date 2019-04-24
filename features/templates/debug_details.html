@@ -14,7 +14,7 @@
                    <p class="service-description"><center><span class="glyphicon glyphicon-user" aria-hidden="true"></span></center></p>
                   <center><b>{{debug.views}} Pages Views</b></center>
                    <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} Users  Like this!</b></p></center>
-                   <center><a href="{% url 'form_view' %}">Read More</a></center> 
+                   <center><li><a href="{% url 'new_form' %}">Read More</a></center> 
               </div>
               {% endfor %} 
           </div>
