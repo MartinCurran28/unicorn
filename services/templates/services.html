@@ -10,7 +10,11 @@
                    <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ service.image }}')"></div>
                    <h3><center>{{service.name}}</center></h3>
                    <p class="service-description"><center>{{ service.description }}</center></p>
-                   <center><p><a href="{% url 'service_like' pk=service.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{service.likes}} Likes!</b></p></center>
+                    {% if user.is_authenticated %}
+                        <center><p><a href="{% url 'service_like' pk=service.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{service.likes}} Likes!</b></p></center>
+                    {% else %}
+                        <center><b>{{service.likes}} Likes!</b></center>
+                    {% endif %}
                    <center><p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><b>{{ service.price }}</b></p></center>
                    
                    <center>

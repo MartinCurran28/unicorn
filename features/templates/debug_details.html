@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row" height=420>
-          <div class="col-sm-12 col-md-12">
+          <div class="col-sm-4 col-md-4">
               {% for debug in debugs %}
               <div class="thumbnail">
                     <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ debug.image }}')"></div>
@@ -13,8 +13,12 @@
                    <p class="service-description"><center>{{debug.description}}</center></p>
                    <p class="service-description"><center><span class="glyphicon glyphicon-user" aria-hidden="true"></span></center></p>
                   <center><b>{{debug.views}} Pages Views</b></center>
-                   <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} Users  Like this!</b></p></center>
-                   <center><li><a href="{% url 'new_form' %}">Read More</a></center> 
+                   {% if user.is_authenticated %}
+                     <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} Users  Like this!</b></p></center>
+                      <center><li><a href="{% url 'new_form' %}">Read More</a></center> 
+                   {% else %}
+                     <center><b>{{debug.likes}} Likes!</b></center>
+                    {% endif %}
               </div>
               {% endfor %} 
           </div>
