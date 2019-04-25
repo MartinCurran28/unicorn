@@ -19,6 +19,6 @@ def service_like(request, pk):
     
 def all_services(request):
     services = Service.objects.all()
-    return render(request, 'homepage.html', {"services": services})    
+    return render(request, 'index.html', {"services": services})    
     
     
