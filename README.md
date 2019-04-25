@@ -33,9 +33,6 @@ You can find **mockups** of how this project was planned and envisioned to look 
 
 
 
-
-
-
 Existing Features
 ---
 
@@ -115,6 +112,12 @@ The following list contains all technologies used in the creation of this projec
 * **Stripe**
   * Method used for online card payment processing in this project. Link for the official site provided[here]( https://stripe.com/en-IE/).
 
+
+Deployment
+---
+I could not properly deploy this app through Heroku. I found the procedure too difficult to manage with the AWS bucket. I tried to deploy it through GitHub pages, but I accidentally created a page which only displayed the README.md and could not figure out how to change the default page. It was only afterwards that I realised that I didn’t have the required ‘index.html’ file which you need to set as the default page. This is no consolation, but I have included screenshots of the website for your consideration. I am aware that this is simply not good enough and I am so sorry for this blunder. If you give me the opportunity, I’m sure I could show you the website in some other capacity for you to evaluate it. 
+
+In spite of this, my code and all of my commits are available on Github for you to inspect and run locally. Should you require my Cloud9 credentials, please do not hesitate to get in touch. To run this code locally, you can clone this repository from the Clone or Download button at the top of the page and write git clone followed by the cloned URL into an editor of your choosing. To cut ties with GitHub, use git remote rm origin in the terminal.
 
 
 Credits
