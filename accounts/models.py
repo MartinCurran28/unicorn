@@ -17,7 +17,10 @@ class Post(models.Model):
     image = models.ImageField(upload_to="img", blank=True, null=True)
     
     def __str__(self):
-        return self.title + self.content
+        return self.title + self.content 
+        
+    def __unicode__(self):
+        return self.views
         
     
     

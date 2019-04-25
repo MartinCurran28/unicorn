@@ -9,6 +9,10 @@ class PostTest(TestCase):
         
  def test_str_content(self):
         test_content = Post(content = 'This is what is wrong...')
-        self.assertEqual(str(test_content), 'This is what is wrong...')        
+        self.assertEqual(str(test_content), 'This is what is wrong...')   
+        
+ def test_str_views(self):
+        test_views = Post(views = '')
+        self.assertEqual(str(test_views), '')          
         
         
