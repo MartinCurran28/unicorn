@@ -122,7 +122,7 @@ Credits
 
 **Content**
 
-All text used for this website was written by me. 
+All the text used for this website was written by me. 
 
 **Media**
 
