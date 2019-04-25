@@ -1,1 +1,1 @@
-web: gunicorn bedbug.wsgi:application
+web: python app.py
