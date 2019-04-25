@@ -19,5 +19,10 @@ class Join(models.Model):
     date = models.DateField(null=True)
     cv = models.ImageField(upload_to="img", blank=True, null=True)
     
-    def __unicode__(self):
-        return self.name
+    def __str__(self):
+        return self.name + self.surname + self.email + self.phone + self.cover_letter + self.country + self.postcode + self.town + self.street_address1 + self.street_address2 + self.county + self.date
+        
+        
+        
+        
+        

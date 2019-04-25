@@ -19,5 +19,15 @@ class ServiceTest(TestCase):
         test_views = Service(views = "")
         self.assertEqual(str(test_views), "")    
         
+    def test_str_likes(self):
+        test_likes = Service(likes = "")
+        self.assertEqual(str(test_likes), "")       
+        
+    def test_str_price(self):
+        test_price = Service(price = "")
+        self.assertEqual(str(test_price), "")      
+        
+        
+        
         
         

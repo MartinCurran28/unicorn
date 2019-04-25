@@ -13,4 +13,6 @@ class Service(models.Model):
         return self.name + self.description
         
     def __unicode__(self):
-        return self.views + self.price
+        return self.views + self.price 
+        
+        
