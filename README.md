@@ -116,6 +116,46 @@ The following list contains all technologies used in the creation of this projec
   * Method used for online card payment processing in this project. Link for the official site provided[here]( https://stripe.com/en-IE/).
 
 
+Testing
+---
+
+The testing for the Unicorn project used both automated and manual testing methods. For my automated tests, I used the test.py file provided by Django to make sure that the correct value types were being used in my forms and that the conditions of my models were being obeyed. For example, if a value was set to “default : 0” and was being tested as such, then an empty string should pass this test. During testing with Django, I realised that model attributes with string values had to use __str__ and attributes with IntegerFields for example used __unicode__. 
+```
+def __str__(self):
+        return self.name + self.description
+```
+
+Model attributes which used fields such ImageField are described as ‘NoneTypes’ in the terminal and, as such, were not tested. The tests I undertook were designed to test whether or not these fields accepted the expected value types assigned to them. For example, a very easy test I began with was making sure a character field took a simple string as expect.
+
+```
+def test_str_description(self):
+        test_description = Service(description = 'This service is provided by Bedbug')
+        self.assertEqual(str(test_description), 'This service is provided by Bedbug')
+```
+
+By contrast, with an IntegerField, I used an empty string to match the default I’d expect from either the like button or the view counter.
+
+```
+def test_str_views(self):
+        test_views = Service(views = "")
+        self.assertEqual(str(test_views), "")
+```
+
+For all tests performed for this project, please refer to the test.py file in GitHub.
+
+User functionality was tested by using the website as a normal user and checking abnormalities in how it functioned and making sure they worked as expected. Forms were a big part of the webpages outline and testing them accurately meant making sure data was received at the backend the form redirected as expect. As well as this form validation for not only user forms, but authentication was a big part of my manual testing process. For example, the process for testing form submission went as follows:
+
+**Apply! Form**:
+   1. Go to the Apply! Button and click to redirect to the form page.
+   2. Try to submit the form without providing any information. You will see the first field you left blank will alert you that it must be filled in.
+   3. If you continue to leave input field empty, the validation warning will keep triggering until every necessary field is filled in. Please note: the only fields not validated are the category selectors as well as Ingredients and Steps numbers 5-12 which may be left empty if you so choose.
+   4. Once all necessary fields and categories are filled in, you will be able to submit the recipe form.
+   5. The backend admin panel was checked to ensure data was received appropriately.
+
+Other manual tests which I undertook were focused upon device responsiveness to varying screen sizes. Each page of the website was tested across three different browsers (Google Chrome, Safari, Firefox) on multiple mobile devices (iPhone 6, 7, 8, iPad, iPad Pro, Pixel, Pixel 2, Samsung Galaxy) to ensure compatibility and responsiveness. Bootstrap aided in allowing an easier grid system to work from. The navigation bar also uses a side navigation bar to aid in smaller mobile devices.
+
+
+
 Deployment
 ---
 I could not properly deploy this app through Heroku. I found the procedure too difficult to manage with the AWS bucket. I tried to deploy it through GitHub pages, but I accidentally created a page which only displayed the README.md and could not figure out how to change the default page. It was only afterwards that I realised that I didn’t have the required ‘index.html’ file which you need to set as the default page. This is no consolation, but I have included screenshots of the website for your consideration. I am aware that this is simply not good enough and I am so sorry for this blunder. If you give me the opportunity, I’m sure I could show you the website in some other capacity for you to evaluate it. 
