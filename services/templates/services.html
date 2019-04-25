@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
+     <center>
+        <a class="story-img" href="#">
+                <img src="/media/image/check.png" height="300">
+            </a>
+    </center>
     <div class="row" height=420>
         <h2><strong><center>Future Features</center></strong></h2>
        <center><h3>These Features Will Implemented With Your Support! Please Give What You Can and Be Sure to Upvote The Features You'd Like To See.</h3></center>
@@ -12,7 +17,7 @@
       </center>
       
       {% for service in services %}
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-12 col-md-4">
               <div class="thumbnail">
                    <div class="service" style="background-image: url('{{ MEDIA_URL }}{{ service.image }}')"></div>
                    <h3><center>{{service.name}}</center></h3>
@@ -45,26 +50,28 @@
     </div>
 </div>
 
-<footerclass="container-fluid">
-        <div id="footer-details" class="row">
-            <div class="col-sm-4 text-center">
-                <center>
-             <h2><a href="">Unicorn</a></h2>
+<!-- Footer -->
+<footer class="page-footer">
+
+  <!-- Copyright -->
+  <div class="container">
+    <div class="row">
+       <div class="col-sm-6 col-md-6">
+          <center>
+             <a class="navbar-brand" href="">Unicorn</a>
           </center>
-            </div> 
-            <div class="col-sm-4 text-center">
-                 <center>
-                    <h2><a href="{% url 'new_app' %}">Join the Team!</a></h2>
-                 </center>
-            </div>
-            <div class="col-sm-4 text-center">
-                <center>
-                    <h2><a href="{% url 'services' %}">Future Feature</a></h2>
-                </center>
-            </div>
-        </div>
-      </div>    
-    </footer>
-    
+       </div>
+       <div class="col-sm-6 col-md-6">
+          <center>
+             <a class="navbar-brand" href="{% url 'new_app' %}">Apply!</a>
+          </center>
+       </div>
+    </div>
+    </div>
+   </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 {% endblock %}

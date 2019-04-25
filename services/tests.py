@@ -14,7 +14,10 @@ class ServiceTest(TestCase):
     def test_str_description(self):
         test_description = Service(description = 'This service is provided by Bedbug')
         self.assertEqual(str(test_description), 'This service is provided by Bedbug')
+    
+    def test_str_views(self):
+        test_views = Service(views = "")
+        self.assertEqual(str(test_views), "")    
         
-    def test_str_price(self):
-        test_price = Service(price = '20.00')
-        self.assertEqual(str(test_price), '20.00')   
+        
+        
