@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Join(models.Model):
     
-    first_name =  models.CharField(max_length=200)
+    name = models.CharField(max_length=200, default='')
     surname = models.CharField(max_length=200)
     email =  models.CharField(max_length=200)
     phone = models.CharField(max_length=200)

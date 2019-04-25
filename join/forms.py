@@ -6,4 +6,4 @@ from .models import Join
 class JoinForm(forms.ModelForm):
     class Meta:
         model = Join
-        fields = ('first_name', 'surname', 'email', 'phone', 'town', 'street_address1', 'street_address2', 'county', 'date', 'cover_letter', 'cv')
+        fields = ('name', 'surname', 'email', 'phone', 'town', 'street_address1', 'street_address2', 'county', 'date', 'cover_letter', 'cv')

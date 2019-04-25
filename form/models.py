@@ -11,7 +11,7 @@ class Form(models.Model):
     content = models.TextField()
     image = models.ImageField(upload_to="img", blank=True, null=True)
     
-    def __unicode__(self):
-        return self.name
+    def __str__(self):
+        return self.name + self.email + self.title
         
     

@@ -10,4 +10,4 @@ class Service(models.Model):
     image = models.ImageField(upload_to='image')
     
     def __str__(self):
-        return self.name
+        return self.name + self.description + self.price

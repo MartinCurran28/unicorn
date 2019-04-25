@@ -6,8 +6,14 @@
 <div class="container">
     
     <div class="row">
-        <h2><strong><center>Future Features</center></strong></h2>
-        <center><h3>These Features Will Implemented With Your Support! Please Give What You Can and Be Sure to Upvote The Features You'd Like To See.</h3></center>
+        <h2><strong><center>We Debug for Free!</center></strong></h2>
+        <center><h3>Whether You Just Have a Question Or Wish To Have Your  Bugs Exterminated, Let Us Know!.</h3></center>
+        <center>
+          <form action="{% url 'search' %}" method="get">
+            <input type="text" name="q">
+                <button type="submit">Search</button>
+          </form>
+      </center>
     </div>      
           
     <div class="container">   
@@ -21,8 +27,7 @@
                    <p class="service-description"><center><span class="glyphicon glyphicon-user" aria-hidden="true"></span></center></p>
                   <center><b>{{debug.views}} Pages Views</b></center>
                    {% if user.is_authenticated %}
-                     <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} Users  Like this!</b></p></center>
-                      <center><li><a href="{% url 'new_form' %}">Read More</a></center> 
+                     <center><p><a href="{% url 'bug_like' pk=debug.pk %}" class="btn btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a></span><b> {{debug.likes}} likes!</b></p></center>
                        <center><a href="{% url 'new_form' %}" class="btn btn-default">Read More</a></center>
                    {% else %}
                      <center><b>{{debug.likes}} Likes!</b></center>
@@ -51,7 +56,7 @@
        </div>
        <div class="col-sm-4 col-md-4">
           <center>
-             <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a>
+             <a class="navbar-brand" href="{% url 'new_app' %}">Join the Team!</a></h3>
           </center>
        </div>
        <div class="col-sm-4 col-md-4">
