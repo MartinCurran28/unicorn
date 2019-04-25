@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Debug, Future_Feature
+from .models import Debug
 
 admin.site.register(Debug)
-admin.site.register(Future_Feature)

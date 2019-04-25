@@ -47,6 +47,8 @@ class JoinTest(TestCase):
         test_county = Join(country = 'Clare')
         self.assertEqual(str(test_county), 'Clare') 
         
+    
+        
         
         
         

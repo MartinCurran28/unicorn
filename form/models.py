@@ -12,6 +12,9 @@ class Form(models.Model):
     image = models.ImageField(upload_to="img", blank=True, null=True)
     
     def __str__(self):
-        return self.name + self.email + self.title
+        return self.name + self.email + self.title + self.content
+        
+    def __unicode__(self):
+        return self.image
         
     

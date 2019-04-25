@@ -23,6 +23,3 @@ class Join(models.Model):
         return self.name + self.surname + self.email + self.phone + self.cover_letter + self.country + self.postcode + self.town + self.street_address1 + self.street_address2 + self.county + self.date
         
         
-        
-        
-        

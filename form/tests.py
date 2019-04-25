@@ -15,3 +15,21 @@ class FormTest(TestCase):
         test_email = Form(email = 'martincurran28@hotmail.com')
         self.assertEqual(str(test_email), 'martincurran28@hotmail.com')
         
+    def test_str_title(self):
+        test_title = Form(title = 'My Bug')
+        self.assertEqual(str(test_title), 'My Bug')   
+        
+    def test_str_content(self):
+        test_content = Form(content = 'This is my issue...')
+        self.assertEqual(str(test_content), 'This is my issue...')    
+        
+    def test_str_image(self):
+        test_image = Form(image = '')
+        self.assertEqual(str(test_image), '')  
+        
+        
+        
+        
+        
+        
+        
