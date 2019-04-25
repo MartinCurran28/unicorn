@@ -8,6 +8,9 @@ class Debug(models.Model):
     image = models.ImageField(upload_to='image')
     
     def __str__(self):
-        return self.name        
+        return self.name + self.description 
+        
+    def __unicode__(self):
+        return self.views + self.likes
         
         
