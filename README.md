@@ -32,6 +32,20 @@ Finally, users who wish to become part of the Unicorn family can do so through t
 You can find **mockups** of how this project was planned and envisioned to look below and also in my GitHub under the mockups folder.
 
 
+**HomePage**
+
+<img src="mockups/images/HomePageMockup.jpeg" alt="drawing" width="200"/>
+
+**Review**
+
+<img src="mockups/images/ReviewMockup.jpeg" alt="drawing" width="200"/>
+
+**Form**
+
+<img src="mockups/images/FormMockup.jpeg" alt="drawing" width="200"/>
+
+
+
 
 
 
@@ -162,6 +176,7 @@ I could not properly deploy this app through Heroku. I found the procedure too d
 
 In spite of this, my code and all of my commits are available on Github for you to inspect and run locally. Should you require my Cloud9 credentials, please do not hesitate to get in touch. To run this code locally, you can clone this repository from the Clone or Download button at the top of the page and write git clone followed by the cloned URL into an editor of your choosing. To cut ties with GitHub, use git remote rm origin in the terminal.
 
+For images of the website, please see the **wesbite_images** folderin GitHub.
 
 Credits
 ---
